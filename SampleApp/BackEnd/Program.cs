@@ -46,8 +46,10 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 
+// Endpoint to get current server time
 app.MapGet("/time", () =>
 {
+    // Return current server time in ISO 8601 format
     return new { currentTime = DateTime.Now };
 })
 .WithName("GetCurrentTime");
